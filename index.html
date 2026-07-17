@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorveteria Delícia Gelada</title>
+    <style>
+        /* Cores principais: Verde-água (#20B2AA, #7FFFD4, #E0FFFF) e Neutros */
+        :root {
+            --verde-agua-escuro: #1aa099;
+            --verde-agua: #20B2AA;
+            --verde-agua-claro: #aaeae6;
+            --fundo-gelado: #f2fbfb;
+            --texto-escuro: #2c3e50;
+            --branco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--fundo-gelado);
+            color: var(--texto-escuro);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--verde-agua);
+            color: var(--branco);
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Seções do Cardápio */
+        .categoria {
+            margin-bottom: 3rem;
+        }
+
+        .categoria-titulo {
+            color: var(--verde-agua-escuro);
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--verde-agua-claro);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Grid de Itens */
+        .grid-cardapio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Card do Sorvete */
+        .item-card {
+            background-color: var(--branco);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid var(--verde-agua);
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(32, 178, 170, 0.15);
+        }
+
+        .item-topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-nome {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--texto-escuro);
+        }
+
+        .item-preco {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--verde-agua-escuro);
+            white-space: nowrap;
+        }
+
+        .item-descricao {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Rodapé / Informações */
+        footer {
+            background-color: var(--verde-agua-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .horario {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho da Sorveteria -->
+    <header>
+        <h1>Delícia Gelada</h1>
+        <p>O sabor que refresca o seu dia!</p>
+    </header>
+
+    <!-- Conteúdo do Cardápio -->
+    <main class="container">
+
+        <!-- CATEGORIA 1 -->
+        <section class="categoria">
+            <h2 class="categoria-titulo">🍦 Tradicionais (Casquinha ou Copo)</h2>
+            <div class="grid-cardapio">
+                
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">1 Bola</span>
+                        <span class="item-preco">R$ 8,00</span>
+                    </div>
+                    <p class="item-descricao">Escolha seu sabor favorito. Acompanha uma calda grátis.</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">2 Bolas</span>
+                        <span class="item-preco">R$ 14,00</span>
+                    </div>
+                    <p class="item-descricao">Combine dois sabores e turbine com até 2 coberturas.</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">3 Bolas</span>
+                        <span class="item-preco">R$ 18,00</span>
+                    </div>
+                    <p class="item-descricao">Para os verdadeiros amantes de sorvete. Até 3 caldas à escolha.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CATEGORIA 2 -->
+        <section class="categoria">
+            <h2 class="categoria-titulo">🍧 Taças Especiais</h2>
+            <div class="grid-cardapio">
+
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">Banana Split</span>
+                        <span class="item-preco">R$ 26,00</span>
+                    </div>
+                    <p class="item-descricao">3 bolas de sorvete (creme, morango, chocolate), banana fatiada, caldas, chantilly, castanhas e cereja.</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">Sundae Clássico</span>
+                        <span class="item-preco">R$ 16,00</span>
+                    </div>
+                    <p class="item-descricao">2 bolas de sorvete à sua escolha, muita calda quente de chocolate, farofa de amendoim e rolinhos de waffer.</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">Grand Gateau</span>
+                        <span class="item-preco">R$ 28,00</span>
+                    </div>
+                    <p class="item-descricao">Petit gateau quente mergulhado em ganache de chocolate, acompanhado de picolé artesanal e morangos frescos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CATEGORIA 3 -->
+        <section class="categoria">
+            <h2 class="categoria-titulo">🥤 Milkshakes & Bebidas</h2>
+            <div class="grid-cardapio">
+
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">Milkshake Crocante (500ml)</span>
+                        <span class="item-preco">R$ 18,50</span>
+                    </div>
+                    <p class="item-descricao">Batido na hora com sorvete de baunilha, calda de chocolate e pedaços crocantes de Ovomaltine.</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">Milkshake de Frutas Vermelhas</span>
+                        <span class="item-preco">R$ 19,00</span>
+                    </div>
+                    <p class="item-descricao">Deliciosa combinação de sorvete de creme batido com geleia artesanal de morango, amora e framboesa.</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-topo">
+                        <span class="item-nome">Coffee Shake</span>
+                        <span class="item-preco">R$ 17,00</span>
+                    </div>
+                    <p class="item-descricao">Para os amantes de café! Sorvete de creme batido com espresso, chocolate e um toque de canela.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé informativo -->
+    <footer>
+        <p>📍 Av. dos Gelados, 1000 - Centro</p>
+        <p class="horario">Aberto de Terça a Domingo, das 12h às 22h</p>
+    </footer>
+
+</body>
+</html>
